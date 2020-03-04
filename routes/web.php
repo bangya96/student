@@ -14,5 +14,7 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', 'usercontroller@index');
+Route::get('/test', 'usercontroller@index');
 Route::get('/ajax', 'usercontroller@ajax');
+Route::get('/', 'usercontroller@welcome');
+Route::get('/dashboard', 'usercontroller@dashboard');

@@ -42,4 +42,12 @@ class usercontroller extends Controller
         Cache::put('key', $a, now()->addMinutes(100));
 
     }
+
+    public function welcome(){
+        return view('welcome2');
+    }
+
+    public function dashboard(){
+        return view('dashboard');
+    }
 }
