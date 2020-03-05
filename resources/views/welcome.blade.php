@@ -68,7 +68,7 @@
 <script>
     function UpdateStatus(data, long){
         document.getElementById(data).play();
-        $.ajax({url: "http://web.test/ajax", data:{data1:data}, success: function(result){
+        $.ajax({url: "{{ Request()->parameter }}/ajax", data:{data1:data}, success: function(result){
                 setTimeout(reload, long);
             }});
     }

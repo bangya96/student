@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -27,14 +28,31 @@
     <div class="container-login100">
         <div class="wrap-login100" style="margin-bottom: 50px">
             <div class="row">
-                <a>
-                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" width="100" height="100">
-                    <p>test</p>
-                </a>
+                @foreach($cache as $caches)
+                    <audio id="{{$caches->id}}">
+                        <source src="{{asset($caches->audio)}}" type="audio/ogg">
+                    </audio>
+                    <a class="icon">
+                        <img src="{{asset($caches->image)}}" width="100" height="100">
+                        <p>{{$caches->id}}</p>
+                    </a>
+                @endforeach
             </div>
+            <button onclick='playall({{$array}})' style="border: #fff solid 2px; width: 100px; background-color: #7ba1ff;">Play All</button>
         </div>
 
         <div class="wrap-login100">
+            <div class="row" style="margin: auto;">
+                @foreach($data as $datas)
+                    <audio id="{{$datas->id}}">
+                        <source src="{{asset($datas->audio)}}" type="audio/ogg">
+                    </audio>
+                    <a class="icon" onclick='UpdateStatus( {{$datas->id}} , {{$datas->long}} )'>
+                        <img src="{{asset($datas->image)}}" width="100" height="100">
+                        <p>{{$datas->nama}}</p>
+                    </a>
+                @endforeach
+            </div>
         </div>
         {{--<div class="wrap-login100">--}}
             {{--<div class="login100-pic js-tilt" data-tilt>--}}
@@ -88,7 +106,22 @@
     </div>
 </div>
 
-
+<script>
+    function UpdateStatus(data, long){
+        document.getElementById(data).play();
+        $.ajax({url: "{{ Request()->parameter }}/ajax", data:{data1:data}, success: function(result){
+                setTimeout(reload, long);
+            }});
+    }
+    function reload() {
+        location.reload();
+    }
+    function playall(datas){
+        console.log(datas);
+        var aud = document.getElementById(datas[0]['id']).play();
+        console.log();
+    }
+</script>
 
 
 <!--===============================================================================================-->

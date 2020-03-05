@@ -191,6 +191,13 @@ iframe {
   padding: 20px 20px 20px 20px;
 }
 
+.icon{
+  margin: 10px;
+  /*height: 100px;*/
+  width: 130px;
+  text-align: center
+}
+
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {
