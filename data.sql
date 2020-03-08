@@ -27,8 +27,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table web.users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `nama`, `image`, `audio`, `long`, `page`, `created_at`, `updated_at`) VALUES
-	(1, 'saya', 'storage/slide3/ingin-melihat.jpg', 'storage/Red-tailed-hawk-sound.mp3', 4500, 1, '2020-02-23 09:48:03', '2020-02-23 09:48:04'),
-	(2, 'dia', 'storage/slide3/ingin-mencari.jpg', 'storage/Blackbird-tweet.mp3', 4000, 1, '2020-02-23 09:48:03', '2020-02-23 09:48:04');
+	(1, 'saya', 'storage/slide3/ingin-melihat.jpg', 'storage/Eurasian-collared-dove-call.mp3', 4000, 1, '2020-02-23 09:48:03', '2020-02-23 09:48:04'),
+	(2, 'dia', 'storage/slide3/ingin-mencari.jpg', 'storage/Blackbird-tweet.mp3', 6000, 1, '2020-02-23 09:48:03', '2020-02-23 09:48:04');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

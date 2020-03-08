@@ -116,10 +116,18 @@
     function reload() {
         location.reload();
     }
-    function playall(datas){
-        console.log(datas);
-        var aud = document.getElementById(datas[0]['id']).play();
-        console.log();
+
+    function timer(ms) {
+        return new Promise(res => setTimeout(res, ms));
+    }
+
+    async function playall(datas){
+        for (let i = 0; i < datas.length; i++) {
+            let player = document.getElementById(datas[i].id);
+            player.currentTime=0;
+            player.play();
+            await timer(datas[i].long);
+        }
     }
 </script>
 
