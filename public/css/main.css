@@ -74,6 +74,10 @@ p {
 	margin: 0px;
 }
 
+text{
+  display: none;
+}
+
 ul, li {
 	margin: 0px;
 	list-style-type: none;
@@ -84,6 +88,14 @@ ul, li {
 input {
 	outline: none;
 	border: none;
+}
+
+.buttonpage{
+  background-color: #69ce68;
+  padding: 7px;
+  border-radius: 10px;
+  margin: 0px 10px 0px 10px;
+  color: black;
 }
 
 textarea {

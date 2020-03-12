@@ -14,7 +14,12 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/test', 'usercontroller@index');
-Route::get('/ajax', 'usercontroller@ajax');
+
 Route::get('/', 'usercontroller@welcome');
 Route::get('/dashboard', 'usercontroller@dashboard');
+Route::get('/page2', 'usercontroller@page2');
+Route::get('/page3', 'usercontroller@page3');
+Route::get('/test', 'usercontroller@index');
+Route::get('/ajax', 'usercontroller@ajax');
+Route::get('/clear', 'usercontroller@clear');
+Route::get('/delete/{id}', 'usercontroller@delete');
