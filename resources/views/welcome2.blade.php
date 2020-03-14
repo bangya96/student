@@ -36,7 +36,7 @@
 					</span>
 
                 <span class="login100-form-title">
-						INOVASI DIGITAL DALAM PENGAJARAN DAN PEMBELAJARAN
+						INOVASI DIGITAL PECS DALAM PENGAJARAN DAN PEMBELAJARAN
 					</span>
 
                 {{--<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">--}}
@@ -64,7 +64,8 @@
 							HakCipta :
 						</span>
                     <a class="txt2" href="#">
-                        <br> 1 . Nama1<br> 2 . Nama2
+                        <br> 1 . MUHAMMAD YAZIEQ BIN SUHAIDIN
+                        <br> 2 . WARAHMAH BINTI SHAMSUDDIN
                     </a>
                 </div>
 
