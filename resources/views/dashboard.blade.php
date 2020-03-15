@@ -40,15 +40,16 @@
                     </a>
                 @endforeach
             </div>
-            <button onclick='playall({{$array}})' style="border: #fff solid 2px; width: 100px; background-color: #7ba1ff;">Play All</button>
+            {{--<button onclick='playall({{$array}})' style="border: #fff solid 2px; width: 100px; background-color: #7ba1ff;">Mainkan</button>--}}
         </div>
 
         <div style="width: 960px; background: #bcbcbc; border-radius: 10px; overflow: hidden; padding: 20px">
             <div class="row">
-                <a class="buttonpage" href="/dashboard">Page 1</a>
-                <a class="buttonpage" href="/page2">Page 2</a>
-                <a class="buttonpage" href="/page3">Page 3</a>
-                <a class="buttonpage" style="background-color: red" href="/clear">Clear</a>
+                <a class="buttonpage" href="/dashboard">Kemahuaan</a>
+                <a class="buttonpage" href="/page2">Makanan</a>
+                <a class="buttonpage" href="/page3">Perasaan</a>
+                <a class="buttonpage" style="background-color: #2fff1f" onclick='playall({{$array}})' href="#">Mainkan</a>
+                <a class="buttonpage" style="background-color: red" href="/clear">Padam Semua</a>
             </div>
         </div>
         <br>
