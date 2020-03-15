@@ -21,25 +21,37 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100" style="margin-bottom: 50px">
+            <text>{{$i = 0}}</text>
             <div class="row">
                 @foreach($cache as $caches)
                     <audio id="{{$caches->id}}">
                         <source src="{{asset($caches->audio)}}" type="audio/ogg">
                     </audio>
-                    <a class="icon">
+                    <a class="icontop" href="/delete/{{$i}}">
                         <img src="{{asset($caches->image)}}" width="100" height="100">
-                        <p>{{$caches->id}}</p>
+                        <p>{{$caches->nama}}</p>
+                        <text>{{$i++}}</text>
                     </a>
                 @endforeach
             </div>
             <button onclick='playall({{$array}})' style="border: #fff solid 2px; width: 100px; background-color: #7ba1ff;">Play All</button>
         </div>
+
+        <div style="width: 960px; background: #bcbcbc; border-radius: 10px; overflow: hidden; padding: 20px">
+            <div class="row">
+                <a class="buttonpage" href="/dashboard">Page 1</a>
+                <a class="buttonpage" href="/page2">Page 2</a>
+                <a class="buttonpage" href="/page3">Page 3</a>
+                <a class="buttonpage" style="background-color: red" href="/clear">Clear</a>
+            </div>
+        </div>
+        <br>
 
         <div class="wrap-login100">
             <div class="row" style="margin: auto;">
@@ -54,55 +66,6 @@
                 @endforeach
             </div>
         </div>
-        {{--<div class="wrap-login100">--}}
-            {{--<div class="login100-pic js-tilt" data-tilt>--}}
-                {{--<img src="images/img-01.png" alt="IMG">--}}
-            {{--</div>--}}
-
-            {{--<form class="login100-form validate-form">--}}
-					{{--<span class="login100-form-title">--}}
-						{{--Member Login--}}
-					{{--</span>--}}
-
-                {{--<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">--}}
-                    {{--<input class="input100" type="text" name="email" placeholder="Email">--}}
-                    {{--<span class="focus-input100"></span>--}}
-                    {{--<span class="symbol-input100">--}}
-							{{--<i class="fa fa-envelope" aria-hidden="true"></i>--}}
-						{{--</span>--}}
-                {{--</div>--}}
-
-                {{--<div class="wrap-input100 validate-input" data-validate = "Password is required">--}}
-                    {{--<input class="input100" type="password" name="pass" placeholder="Password">--}}
-                    {{--<span class="focus-input100"></span>--}}
-                    {{--<span class="symbol-input100">--}}
-							{{--<i class="fa fa-lock" aria-hidden="true"></i>--}}
-						{{--</span>--}}
-                {{--</div>--}}
-
-                {{--<div class="container-login100-form-btn">--}}
-                    {{--<button class="login100-form-btn">--}}
-                        {{--Login--}}
-                    {{--</button>--}}
-                {{--</div>--}}
-
-                {{--<div class="text-center p-t-12">--}}
-						{{--<span class="txt1">--}}
-							{{--Forgot--}}
-						{{--</span>--}}
-                    {{--<a class="txt2" href="#">--}}
-                        {{--Username / Password?--}}
-                    {{--</a>--}}
-                {{--</div>--}}
-
-                {{--<div class="text-center p-t-136">--}}
-                    {{--<a class="txt2" href="#">--}}
-                        {{--Create your Account--}}
-                        {{--<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>--}}
-                    {{--</a>--}}
-                {{--</div>--}}
-            {{--</form>--}}
-        {{--</div>--}}
     </div>
 </div>
 
