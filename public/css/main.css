@@ -212,6 +212,27 @@ iframe {
   background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
+.container-login1000 {
+  width: 100%;
+  min-height: 100vh;
+  /*display: -webkit-box;*/
+  /*display: -webkit-flex;*/
+  /*display: -moz-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  /*align-content: center;*/
+  /*text-align: center;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  padding: 15px;
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
 .wrap-login100 {
   width: 960px;
   background: #fff;
@@ -252,7 +273,7 @@ iframe {
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {
-  width: 316px;
+  width: 600px;
 }
 
 .login100-pic img {
@@ -368,6 +389,31 @@ iframe {
 
 /*------------------------------------------------------------------
 [ Button ]*/
+
+.myButton {
+  box-shadow: 0px 10px 14px -7px #276873;
+  background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color:#599bb3;
+  border-radius:8px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:5px 20px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color:#408c99;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
